@@ -3,7 +3,7 @@ const axios = require('axios');
 require('dotenv').config();
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000; // Added PORT configuration
 
 let recentSearches = [];
 
@@ -43,7 +43,7 @@ app.get('/weather', async (req, res) => {
   }
 });
 
-// Start server
+// Start server with PORT configuration
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
